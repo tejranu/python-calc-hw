@@ -24,5 +24,11 @@ def divide(num1, num2):
     return num1 / num2
 
 
+def square_root(num):
+    return math.sqrt(num)
+
+
+def square_number(num):
+    return num * num
 
 

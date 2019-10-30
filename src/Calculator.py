@@ -32,3 +32,12 @@ def square_number_val(num):
     return num * num
 
 
+class Calculator():
+    value = 0
+
+    def __init__(self):
+        pass
+
+    
+
+

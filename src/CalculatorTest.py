@@ -15,6 +15,9 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_instantiation(self):
         self.assertIsInstance(self.calculator, Calculator)
 
+    def test_addition(self):
+        test_add_data = CSVFileReader('/src/')
+
 
 
 

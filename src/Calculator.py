@@ -11,15 +11,13 @@ def add_vals(num1, num2):
 
 # subtract (return the value of the difference of num1 and num2)
 def subtract_vals(num1, num2):
-    int(num1)
-    int(num2)
-    return num1 - num2
+    num1 = int(num1)
+    num2 = int(num2)
+    return num2 - num1
 
 
 # multiply(return the value of the product of num1 and num2)
 def multiply_vals(num1, num2):
-    int(num1)
-    int(num2)
     return num1 * num2
 
 
@@ -38,6 +36,7 @@ def square_root_val(num):
 def square_number_val(num):
     int(num)
     return num * num
+
 
 class Calculator():
     value = 0

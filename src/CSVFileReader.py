@@ -13,7 +13,7 @@ class CSVFileReader:
         # when constructor is created
         # open the file
         with open(csvfile) as data:
-            csv_data = csv.DictReader(data, delimiter=",")
+            csv_data = csv.DictReader(data, delimiter=',')
             # seperate each value from the csv file by comma found
 
             for row in csv_data:
@@ -22,6 +22,6 @@ class CSVFileReader:
 
     def return_data(self, class_name):
         objects = []
-        for row in self.data:
+        for row in self.file_data:
             objects.append(build(class_name, row))
         return objects

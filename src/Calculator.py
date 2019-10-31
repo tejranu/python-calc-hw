@@ -4,16 +4,22 @@ import math
 
 # add (return the value of the sum of num1 and num2)
 def add_vals(num1, num2):
+    int(num1)
+    int(num2)
     return num1 + num2
 
 
 # subtract (return the value of the difference of num1 and num2)
 def subtract_vals(num1, num2):
+    int(num1)
+    int(num2)
     return num1 - num2
 
 
 # multiply(return the value of the product of num1 and num2)
 def multiply_vals(num1, num2):
+    int(num1)
+    int(num2)
     return num1 * num2
 
 
@@ -25,10 +31,12 @@ def divide_vals(num1, num2):
 
 
 def square_root_val(num):
+    int(num)
     return math.sqrt(num)
 
 
 def square_number_val(num):
+    int(num)
     return num * num
 
 class Calculator():

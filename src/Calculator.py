@@ -31,13 +31,33 @@ def square_root_val(num):
 def square_number_val(num):
     return num * num
 
-
 class Calculator():
     value = 0
 
     def __init__(self):
         pass
 
-    
+    def add(self, num1, num2):
+        self.value = add_vals(num1, num2)
+        return self.value
 
+    def subtract(self, num1, num2):
+        self.value = subtract_vals(num1, num2)
+        return self.value
+
+    def multiply(self, num1, num2):
+        self.value = multiply_vals(num1, num2)
+        return self.value
+
+    def divide(self, num1, num2):
+        self.value = divide_vals(num1, num2)
+        return self.value
+
+    def square_root(self, num1):
+        self.value = square_root_val(num1)
+        return self.value
+
+    def square_number(self, num1):
+        self.value = square_number_val(num1)
+        return self.value
 

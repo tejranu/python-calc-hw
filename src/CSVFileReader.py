@@ -20,7 +20,6 @@ class CSVFileReader:
                 self.file_data.append(row)
         pass
 
-
     def return_data(self, class_name):
         objects = []
         for row in self.data:

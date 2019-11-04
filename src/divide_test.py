@@ -11,8 +11,8 @@ class MyTestCase(unittest.TestCase):
     def test_divide_method(self):
         div_data = CSVFileReader('/src/division.csv').file_data
         for row in div_data:
-            self.assertEqual(self.calculator.divide(float(row['Value 1']), float(row['Value 2'])), float(row['Result']))
-            self.assertEqual(self.calculator.value, round((row['Result'])), 10)
+            self.assertAlmostEqual(self.calculator.divide(float(row['Value 1']), float(row['Value 2'])), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.value, round(float((row['Result'])), 10))
 
 
 if __name__ == '__main__':

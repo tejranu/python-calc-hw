@@ -24,10 +24,7 @@ def multiply_vals(num1, num2):
 
 
 def divide_vals(num1, num2):
-    float(num1)
-    float(num2)
-
-    return num1 / num2
+    return num2 / num1
 
 
 def square_root_val(num):
@@ -60,7 +57,7 @@ class Calculator():
 
     def divide(self, num1, num2):
         self.value = divide_vals(num1, num2)
-        return self.value
+        return round(float(self.value), 8)
 
     def square_root(self, num1):
         self.value = square_root_val(num1)

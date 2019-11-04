@@ -18,6 +18,8 @@ def subtract_vals(num1, num2):
 
 # multiply(return the value of the product of num1 and num2)
 def multiply_vals(num1, num2):
+    num1 = int(num1)
+    num2 = int(num2)
     return num1 * num2
 
 
@@ -29,7 +31,7 @@ def divide_vals(num1, num2):
 
 
 def square_root_val(num):
-    int(num)
+    float(num)
     return math.sqrt(num)
 
 

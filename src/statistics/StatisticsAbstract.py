@@ -8,11 +8,11 @@ class StatisticsAbstract(ABC):
         pass
 
     @abstractmethod
-    def population_mean(self):
+    def population_mean(self, number_list):
         pass
 
     @abstractmethod
-    def median(self):
+    def median(self, number_list):
         pass
 
     @abstractmethod
@@ -67,7 +67,7 @@ class StatisticsAbstract(ABC):
     def variance_sample_proportion(self):
         pass
 
-    
+
 
 
 

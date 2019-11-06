@@ -3,10 +3,24 @@ from src.statistics.StatisticsAbstract import StatisticsAbstract
 
 class Statistics(StatisticsAbstract):
 
-    def population_mean(self):
-        pass
+    result = 0
 
-    def median(self):
+    def population_mean(self, number_list):
+        # population mean formula:
+        number_list = list(number_list)
+        sum_value = 0
+
+        for x in number_list:
+            sum_value = sum(number_list)
+
+        # take the sum of the items and then divide it by the number of items
+        number_count = len(number_list)
+
+        pop_mean = sum_value / number_count
+        # then return that value
+        return pop_mean
+
+    def median(self, number_list):
         pass
 
     def mode(self):

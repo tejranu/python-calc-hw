@@ -20,7 +20,7 @@ class StatisticsAbstract(ABC):
         pass
 
     @abstractmethod
-    def pop_standard_deviation(self):
+    def pop_standard_deviation(self, number_list):
         pass
 
     @abstractmethod

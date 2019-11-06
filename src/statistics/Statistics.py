@@ -1,3 +1,5 @@
+import math
+
 from src.statistics.StatisticsAbstract import StatisticsAbstract
 
 
@@ -39,7 +41,21 @@ def median(number_list):
         return (float(number_list[middle_val_index]) + float(number_list[after_middle_index])) / 2
 
 
-#        return self.result
+def pop_standard_deviation(number_list):
+    # 1. Calculate the mean of number_list
+    mean = population_mean(number_list)
+    # 2. Subtract mean from each data point and then square each value
+    new_list = []
+    for x in number_list:
+        new_val = x - mean
+        new_val = math.pow(new_val, 2)
+        new_list.append(new_val)
+    # 3. Calculate the mean of the squared differences, this is the variance
+    new_mean = population_mean(new_list)
+    # 4. pop standard deviation is the square root of the variance
+    result = math.sqrt(new_mean)
+
+    return result
 
 
 class Statistics(StatisticsAbstract):
@@ -57,8 +73,9 @@ class Statistics(StatisticsAbstract):
     def mode(self):
         pass
 
-    def pop_standard_deviation(self):
-        pass
+    def pop_standard_deviation(self, number_list):
+        self.result = pop_standard_deviation(number_list)
+        return self.result
 
     def variance_pop_proportion(self):
         pass

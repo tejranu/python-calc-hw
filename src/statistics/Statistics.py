@@ -58,6 +58,26 @@ def pop_standard_deviation(number_list):
     return result
 
 
+def mode(number_list):
+    number_list = list(number_list)
+    value_dict = {}
+    mode_val = 0
+
+    for val in number_list:
+        value_dict[val] = number_list.count(val)
+
+    for key in value_dict.keys():
+        if value_dict.get(key) == max(value_dict.values()):
+            mode_val = key
+
+    return mode_val
+
+
+
+def variance_pop_proportion(number_list):
+    pass
+
+
 class Statistics(StatisticsAbstract):
 
     result = 0
@@ -70,8 +90,9 @@ class Statistics(StatisticsAbstract):
         self.result = median(number_list)
         return self.result
 
-    def mode(self):
-        pass
+    def mode(self, number_list):
+        self.result = mode(number_list)
+        return self.result
 
     def pop_standard_deviation(self, number_list):
         self.result = pop_standard_deviation(number_list)

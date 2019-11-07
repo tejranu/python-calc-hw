@@ -16,7 +16,7 @@ class StatisticsAbstract(ABC):
         pass
 
     @abstractmethod
-    def mode(self):
+    def mode(self, number_list):
         pass
 
     @abstractmethod

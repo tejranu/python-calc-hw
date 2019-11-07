@@ -24,7 +24,7 @@ class StatisticsAbstract(ABC):
         pass
 
     @abstractmethod
-    def variance_pop_proportion(self):
+    def variance_pop_proportion(self, number_list):
         pass
 
     @abstractmethod

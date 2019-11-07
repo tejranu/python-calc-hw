@@ -73,9 +73,21 @@ def mode(number_list):
     return mode_val
 
 
-
 def variance_pop_proportion(number_list):
-    pass
+    # the formula for this is PQ / n
+    # P is the population proportion
+    number_list = list(number_list)
+    p = 0
+    for x in number_list:
+        p = p + x
+    # Q is the proportion of population elements that do no have particular attr. => Q = 1  - P
+    q = p - 1
+    # n is the num of elements in a sample
+    n = len(number_list)
+
+    result = (p * q) / n
+
+    return result
 
 
 class Statistics(StatisticsAbstract):
@@ -98,8 +110,9 @@ class Statistics(StatisticsAbstract):
         self.result = pop_standard_deviation(number_list)
         return self.result
 
-    def variance_pop_proportion(self):
-        pass
+    def variance_pop_proportion(self, number_list):
+        self.result = variance_pop_proportion(number_list)
+        return self.result
 
     def zscore(self):
         pass

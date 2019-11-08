@@ -67,4 +67,3 @@ class StatisticsAbstract(ABC):
     def variance_sample_proportion(self, number_list):
         pass
 
-

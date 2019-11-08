@@ -129,21 +129,22 @@ class Statistics(StatisticsAbstract):
     def population_variance(self):
         pass
 
-    def p_value(self):
-        pass
+    def p_value(self, number_list):
+        self.result = p_value(number_list)
+        return self.result
 
-    def proportion(self):
-        pass
+    def proportion(self, number_list):
+        self.result = proportion(number_list)
+        return self.result
 
-    def sample_mean(self):
-        pass
+    def sample_mean(self, number_list):
+        self.result = sample_mean(number_list)
+        return self.result
 
-    def sample_standard_deviation(self):
-        pass
+    def sample_standard_deviation(self, number_list):
+        self.result = sample_standard_deviation(number_list)
+        return self.result
 
-    def variance_sample_proportion(self):
-        pass
-
-
-
-
+    def variance_sample_proportion(self, number_list):
+        self.result = variance_sample_proportion(number_list)
+        return self.result

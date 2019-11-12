@@ -48,26 +48,22 @@ class StatisticsAbstract(ABC):
         pass
 
     @abstractmethod
-    def p_value(self):
+    def p_value(self, number_list):
         pass
 
     @abstractmethod
-    def proportion(self):
+    def proportion(self, number_list):
         pass
 
     @abstractmethod
-    def sample_mean(self):
+    def sample_mean(self, number_list):
         pass
 
     @abstractmethod
-    def sample_standard_deviation(self):
+    def sample_standard_deviation(self, number_list):
         pass
 
     @abstractmethod
-    def variance_sample_proportion(self):
+    def variance_sample_proportion(self, number_list):
         pass
-
-
-
-
 

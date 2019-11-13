@@ -90,9 +90,9 @@ def variance_pop_proportion(number_list):
     return result
 
 
-
 def p_value(number_list):
     number_list = list(number_list)
+
 
 class Statistics(StatisticsAbstract):
 

@@ -1,6 +1,29 @@
 import math
+from src.statistics.Statistics import Statistics
 
 # create method to add, subtract, multiply, divide, square and square root
+stat = Statistics()
+
+
+def population_mean(number_list):
+    return stat.population_mean(number_list)
+
+
+def median(number_list):
+    return stat.median(number_list)
+
+
+def pop_standard_deviation(number_list):
+    return stat.pop_standard_deviation(number_list)
+
+
+def mode(number_list):
+    return stat.mode(number_list)
+
+
+def variance_pop_proportion(number_list):
+    return stat.variance_pop_proportion(number_list)
+
 
 # add (return the value of the sum of num1 and num2)
 def add_vals(num1, num2):
@@ -37,11 +60,31 @@ def square_number_val(num):
     return num * num
 
 
-class Calculator():
+class Calculator:
     value = 0
 
     def __init__(self):
         pass
+
+    def population_mean(self, number_list):
+        self.value = population_mean(number_list)
+        return self.value
+
+    def median(self, number_list):
+        self.value = median(number_list)
+        return self.value
+
+    def pop_standard_deviation(self, number_list):
+        self.value = pop_standard_deviation(number_list)
+        return self.value
+
+    def mode(self, number_list):
+        self.value = mode(number_list)
+        return self.value
+
+    def variance_pop_proportion(self, number_list):
+        self.value = variance_pop_proportion(number_list)
+        return self.value
 
     def add(self, num1, num2):
         self.value = add_vals(num1, num2)

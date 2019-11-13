@@ -1,6 +1,8 @@
 import math
+from src.statistics.Statistics import Statistics
 
 # create method to add, subtract, multiply, divide, square and square root
+
 
 # add (return the value of the sum of num1 and num2)
 def add_vals(num1, num2):

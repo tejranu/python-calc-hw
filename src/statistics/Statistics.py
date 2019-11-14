@@ -95,18 +95,18 @@ def p_value(number_list):
 
 
 def variance_sample_proportion(number_list):
-    # the formula for this is PQ / n
-    # P is the population proportion
+    # the formula for this is SQ / n
+    # S is the sample proportion
     number_list = list(number_list)
-    p = 0
+    s = 0
     for x in number_list:
-        p = p + x
-    # Q is the proportion of population elements that do no have particular attr. => Q = 1  - P
-    q = p - 1
+        s = s + x
+    # Q is the proportion of population elements that do no have particular attr. => Q = 1  - S
+    q = s - 1
     # n is the num of elements in a sample
     n = len(number_list)
 
-    result = (p * q) / n
+    result = (s * q) / n
 
     return result
 

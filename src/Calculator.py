@@ -25,6 +25,10 @@ def variance_pop_proportion(number_list):
     return stat.variance_pop_proportion(number_list)
 
 
+def p_value(number_list)
+    return stat.p_value(number_list)
+
+
 # add (return the value of the sum of num1 and num2)
 def add_vals(num1, num2):
     int(num1)
@@ -85,6 +89,28 @@ class Calculator:
     def variance_pop_proportion(self, number_list):
         self.value = variance_pop_proportion(number_list)
         return self.value
+
+    
+    def p_value(self, number_list):
+        self.value = p_value(number_list)
+        return self.value
+
+    def proportion(self, number_list):
+        self.value = proportion(number_list)
+        return self.value
+
+    def sample_mean(self, number_list):
+        self.value = sample_mean(number_list)
+        return self.value
+
+    def sample_standard_deviation(self, number_list):
+        self.value = sample_standard_deviation(number_list)
+        return self.value
+
+    def variance_sample_proportion(self, number_list):
+        self.value = variance_sample_proportion(number_list)
+        return self.value
+
 
     def add(self, num1, num2):
         self.value = add_vals(num1, num2)

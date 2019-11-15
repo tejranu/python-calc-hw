@@ -111,6 +111,24 @@ def sample_mean(number_list, sample_size):
     # then return that value
     return result
 
+
+def sample_standard_deviation(number_list, sample_size):
+    # 1. Calculate the mean of number_list
+    mean = sample_mean(number_list, sample_size)
+    # 2. Subtract mean from each data point and then square each value
+    new_list = []
+    for x in number_list:
+        new_val = x - mean
+        new_val = math.pow(new_val, 2)
+        new_list.append(new_val)
+    # 3. Calculate the mean of the squared differences, this is the variance
+    new_mean = population_mean(new_list)
+    # 4. pop standard deviation is the square root of the variance
+    result = math.sqrt(new_mean)
+
+    return result
+
+
 def variance_sample_proportion(number_list, sample_size):
     # the formula for this is SQ / n
     # S is the sample proportion

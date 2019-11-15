@@ -1,6 +1,7 @@
 import math
 
 from src.statistics.StatisticsAbstract import StatisticsAbstract
+from src.statistics.GetSample import GetSample
 
 
 def population_mean(number_list):
@@ -94,17 +95,34 @@ def p_value(number_list):
     number_list = list(number_list)
 
 
-def variance_sample_proportion(number_list):
+def sample_mean(number_list, sample_size):
+    # population mean formula:
+    number_list = list(number_list)
+    sample = GetSample(number_list, sample_size)
+    sum_value = 0
+
+    for x in number_list:
+        sum_value = sum(sample)
+
+    # take the sum of the items and then divide it by the number of items
+    number_count = len(sample)
+
+    result = sum_value / number_count
+    # then return that value
+    return result
+
+def variance_sample_proportion(number_list, sample_size):
     # the formula for this is SQ / n
     # S is the sample proportion
     number_list = list(number_list)
+    sample = GetSample(number_list, sample_size)
     s = 0
     for x in number_list:
         s = s + x
     # Q is the proportion of population elements that do no have particular attr. => Q = 1  - S
     q = s - 1
     # n is the num of elements in a sample
-    n = len(number_list)
+    n = len(sample)
 
     result = (s * q) / n
 
@@ -158,14 +176,14 @@ class Statistics(StatisticsAbstract):
         self.result = proportion(number_list)
         return self.result
 
-    def sample_mean(self, number_list):
-        self.result = sample_mean(number_list)
+    def sample_mean(self, sample_size):
+        self.result = sample_mean(number_list, sample_size)
         return self.result
 
-    def sample_standard_deviation(self, number_list):
-        self.result = sample_standard_deviation(number_list)
+    def sample_standard_deviation(self, sample_size):
+        self.result = sample_standard_deviation(number_list, sample_size)
         return self.result
 
-    def variance_sample_proportion(self, number_list):
-        self.result = variance_sample_proportion(number_list)
+    def variance_sample_proportion(self, sample_size):
+        self.result = variance_sample_proportion(number_list, sample_size)
         return self.result

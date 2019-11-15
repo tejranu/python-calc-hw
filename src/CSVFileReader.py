@@ -14,7 +14,7 @@ class CSVFileReader:
         # open the file
         with open(csvfile) as data:
             csv_data = csv.DictReader(data, delimiter=',')
-            # seperate each value from the csv file by comma found
+            # separate each value from the csv file by comma found
 
             for row in csv_data:
                 self.file_data.append(row)
